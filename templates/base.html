@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Swax</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="{% url 'home' %}">
+        <strong class="green-text">Swax</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+            <a class="nav-link waves-effect" >Categories</a>
+          </li>
+        </ul>
+          
+          <form class="form-inline">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </form>
+        </div>
+        
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect">
+              
+              <i class="fas fa-shopping-cart"></i>
+              <span class="#"> Cart </span>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+             <a class="nav-link waves-effect" ><i class="fas fa-user"></i></a>
+             
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  {% load static %}
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  {% block content %} {% endblock %}
+</body>
+</html>
